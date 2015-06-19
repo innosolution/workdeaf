@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div id="page">
+    	<div id="menu">{% block menu %}<a href="/admin/medee/">Мэдээ</a>
+    	<a href="/admin/sport/">Спорт</a>
+        <a href="/admin/zurag_zasah/">Зураг</a>
+        <a href="/admin/video/">Видео</a>
+        <a href="/admin/file/">Файл</a>
+
+    	{% endblock %}</div>
+    	<div id="sidebar">{% block sidebar %}{% endblock %}</div>
+    	<div id="sidebar1">{% block sidebar1 %} {% endblock %}</div>
+    	<div id="content">{% block content %}
+    	{% endblock %}
+    	</div>
+    </div>
+</body>
+</html>
+<style type="text/css">
+	body
+	{
+		background-color: #FFFFFF;
+	}
+	#page
+	{
+		width: 960px;
+		border: 1px solid blue;
+		height: 1000px;
+		text-align: center
+	}
+	#menu
+	{
+		width: 920px;
+		margin: 5px;
+		border: 1px solid red;
+	}
+	#sidebar
+	{
+		float: left;
+		width: 320px;
+		border: 1px solid red;
+		margin: 5px;
+	}
+	#sidebar1
+	{
+		float: left;
+	}
+	#content
+	{
+		margin: 5px;
+		float: right;
+		width: 600px;
+		border: 1px solid red;
+		padding: 1px;
+	}
+</style>

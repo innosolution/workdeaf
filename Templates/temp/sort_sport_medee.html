@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+{% for i in medee %}
+<h3 align="center">{{ i.title }}</h3>
+ {% if medee.pic != '' %}
+ <img src="/media/{{ i.pic }}/" width="100"/><br>
+ {% endif %}
+{{ i.body|truncatewords:'5' }}<a href="/get_sport/{{ i.id }}/">дэлгэрэнгүй</a>
+
+{% endfor %}
+{% endblock %}
+

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block sidebar %}
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="about">	
+  <div class="row">
+  	  <div class="col-md-3">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="/news/">Home</a></li>
+        <li><a href="/news_lastest/">Сүүлд нэмэгдсэн</a></li>
+        <li><a href="/news_reader/">Хамгийн их уншсан</a></li>
+        <li><a href="/album/">Зургийн сан</a></li>
+        <li><a href="/videos/">Видео сан</a></li>
+        <li><a href="/occation/">Үйл явдал</a></li>
+        <li><a href="/human/">Онцлох хүн</a></li>
+        <li><a href="/notice/">Зарлал</a></li>
+      </ul>
+      </div>
+      <div class="col-md-9">
+      {% for i in posts %}
+      <div class="video">
+         <h3>{{ i.title }}</h3>
+        <iframe width="640" height="360" src="{{ i.name }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        {% endfor %}
+			   </div>
+         </div>		
+		</div>							
+    </div>
+  
+	
+	<div class="container">
+		<div class="row">
+			<hr>
+		</div>
+	</div>
+{% endblock %}
+{% block about_us %}
+{% endblock %}

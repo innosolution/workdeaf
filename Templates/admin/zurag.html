@@ -1,0 +1,20 @@
+{% extends 'admin.html' %}
+
+
+{% block sidebar %}
+{% for i in album %}
+<a href="">{{ i }}</a><br>
+{% endfor %}
+
+<form action="/admin/zurag_nemeh/">
+	<input type="submit" value="Зураг нэмэх">
+</form>
+<form action="/admin/album_nemeh/">
+	<input type="submit" value="Альбом нэмэх">
+</form>
+{% endblock %}
+{% block content %}
+{% for m in zurag %}
+{{ m.name }}<br>
+    	{% endfor %}
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Диф Спортын Хорооны вэбсайт</title>
+    
+  </head>
+  <body>
+	
+	<!-- Responsive slider - START -->
+{% block sidebar %}
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="about">	
+  <div class="row">
+  	  <div class="col-md-3">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="/news/">Home</a></li>
+        <li><a href="/news_lastest/">Сүүлд нэмэгдсэн</a></li>
+        <li><a href="/news_reader/">Хамгийн их уншсан</a></li>
+        <li><a href="/album/">Зургийн сан</a></li>
+        <li><a href="/videos/">Видео сан</a></li>
+        <li><a href="/occation/">Үйл явдал</a></li>
+        <li><a href="/human/">Онцлох хүн</a></li>
+        <li><a href="/notice/">Зарлал</a></li>
+      </ul>
+      </div>
+      <div class="col-md-9">
+        <div class="ig">
+               <div id="slider_container" style="position: relative; width: 720px;
+        height: 480px; overflow: hidden;">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 720px; height: 480px;
+            overflow: hidden;">
+            {% for i in b %}
+            <div>
+                <img u="image" src="/media/{{ i.name }}" />
+                <img u="thumb" src="/media/{{ i.name }}/" />
+            </div>
+            {% endfor %}
+        </div>
+        <!--#region Thumbnail Navigator Skin Begin -->
+        <!-- Help: http://www.jssor.com/development/slider-with-thumbnail-navigator-jquery.html -->
+        <!-- thumbnail navigator container -->
+        <div u="thumbnavigator" class="jssort07" style="width: 720px; height: 100px; left: 0px; bottom: 0px;">
+            <!-- Thumbnail Item Skin Begin -->
+            <div u="slides" style="cursor: default;">
+                <div u="prototype" class="p">
+                    <div u="thumbnailtemplate" class="i"></div>
+                    <div class="o"></div>
+                </div>
+            </div>
+            <!-- Thumbnail Item Skin End -->
+            <!--#region Arrow Navigator Skin Begin -->
+            <!-- Help: http://www.jssor.com/development/slider-with-arrow-navigator-jquery.html -->
+           
+            <!-- Arrow Left -->
+            <span u="arrowleft" class="jssora11l" style="top: 123px; left: 8px;">
+            </span>
+            <!-- Arrow Right -->
+            <span u="arrowright" class="jssora11r" style="top: 123px; right: 8px;">
+            </span>
+            <!--#endregion Arrow Navigator Skin End -->
+        </div>
+        <!--#endregion Thumbnail Navigator Skin End -->
+        <!-- Trigger -->
+    </div>
+			   </div>
+         </div>		
+		</div>							
+    </div>
+  
+  </div><!-- /row -->
+</div><!-- /container -->
+	
+	<div class="container">
+		<div class="row">
+			<hr>
+		</div>
+	</div>
+{% endblock %}
+{% block about_us %}
+{% endblock %}
+
+
+  </body>
+
+  <script type="text/javascript" src="{% static "assets/js/stat.js" %}"></script>
+</html>

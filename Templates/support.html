@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+{% load static %}
+
+ {% block menu %}
+  <div class="container">
+  {% if messages %}
+  	<div class="col-md-4">
+  		{% for message in messages %}
+  		<p>{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+  		{% endfor %}
+  		
+
+  	</div>
+  {% endif %}
+  <div class="tolgoi">
+  <ul class="socail">
+  <li><a href="https://www.facebook.com/MongolianDeafSports"><img src="{% static 'assets/img/facebook.png' %}" width="30"></a></li>
+  <li><a href="https://twitter.com/mgldeafsport"><img src="{% static 'assets/img/twitter.png' %}" width="30"></a></li>
+  <li><a href="#"><img src="{% static 'assets/img/youtube.jpg' %}" width="30"></a></li>
+  <li><a href="#"><img src="{% static 'assets/img/instagram.png' %}" width="30"></a></li>
+  <div class="deesh">  
+  <form class="navbar-form navbar-left" role="search" action="/search/" method="post">{% csrf_token %}
+			<div class="form-group">
+			<input type="text" name="search_text" value="" id="username" class="form-control" role="search" placeholder="Хайх утгаа оруулна уу...">
+			</div>
+			<button type="submit" class="btn btn-default">Хайх</button>
+			</form>
+
+			</ul></div>
+  </div>
+	</div>
+  <header>
+
+	<div class="container">
+	
+		<div class="tolgoi">
+		<div class="lot">
+			<ul class="nav nav-pills">
+			<li role="presentation" class="enabled"><a href="/contact/">Холбоо барих</a></li>
+			<li role="presentation" class="enabled"><a href="/support_us/">Хандив </a></li>
+			
+			
+			<!ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">LAN<span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Монгол хэл</a></li>
+					<li><a href="#">English</a></li>
+				</ul>
+			</li>
+		  <!/ul>
+		  </ul>
+	</div>
+		</div>
+	</div>
+	</header>
+	<header>
+		<div class="container">
+			<div class="row">
+				<nav class="navbar navbar-default" role="navigation">
+					<div class="container-fluid">
+						<div class="navbar-header">
+						
+							<div class="navbar-brand">
+								<a href="/"><h1><b>Диф Спортын Хороо</b></h1></a>
+							</div>
+						</div>
+						<div class="menu">
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class=""><a href="/">Нүүр</a></li>								
+								<li role="presentation"><a href="/about_us/">Бидний тухай</a></li>
+								<li role="presentation"><a href="/news/">Мэдээ</a></li>
+								<li role="presentation"><a href="/sport/">Спорт</a></li>			
+								<li role="presentation"><a href="/deaflymp/">Дифлимп</a></li>
+								<li role="presentation" class="active"><a href="/support_us/">Хандив</a></li>		
+							</ul>
+						</div>
+						
+					</div>			
+				</nav>
+			</div>
+		</div>
+	</header>
+	
+	{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
+{% block content %}
+  
+	
+
+
+
+<div class="container">
+		<div class="row">
+<div class="tabbable tabs-left">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#lA" data-toggle="tab">Хандив</a></li>
+      <!--<li><a href="#lB" data-toggle="tab">Шилэн данс</a></li>  -->
+        
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="lA">
+            	<div class="thumnailss">
+				<h4>- Хандив өгөх дансны мэдээлэл –</h4>													
+				<p>Диф Спортын Хорооны хандивын данс: <b>Хас банк 5000817621</b></p>
+			</div>
+          </div>
+          <div class="tab-pane" id="lB">
+            <div class="thumnailss">
+				<h4>Шилэн данс</h4>													
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+			sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
+			magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+			quis nostrud exerci tation ullamcorper suscipit 
+			lobortis nisl ut aliquip ex ea commodo consequat.							
+			</p>
+			</div>
+          </div>
+        
+        </div>
+</div> 
+      </div>
+</div> 
+
+	    <script>
+        jQuery(document).ready(function ($) {
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
+                $AutoPlayInterval: 0,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $PauseOnHover: 4,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+
+                $ArrowKeyNavigation: true,                          //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                $SlideEasing: $JssorEasing$.$EaseLinear,          //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
+                $SlideDuration: 1600,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+                $SlideWidth: 140,                                   //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+                //$SlideHeight: 100,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+                $SlideSpacing: 0,                                   //[Optional] Space between each slide in pixels, default value is 0
+                $DisplayPieces: 7,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+                $ParkingPosition: 0,                              //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+                $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+                $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
+                $DragOrientation: 1                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider() {
+                var bodyWidth = document.body.clientWidth;
+                if (bodyWidth)
+                    jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 980));
+                else
+                    window.setTimeout(ScaleSlider, 30);
+            }
+            ScaleSlider();
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
+    </script>
+    <div class="container">
+    <div class="center">
+	    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 980px; height: 100px; overflow: hidden; ">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 980px; height: 100px; overflow: hidden;">
+            <div><img u="image" alt="amazon" src="{% static "assets/img/exclusive.llc.png" %}" /></div>
+            <div><img u="image" alt="android" src="{% static "assets/img/erkh.png" %}" width="50" /></div>
+            <div><img u="image" alt="bitly" src="{% static "assets/img/cro.png" %}" /></div>
+            <div><img u="image" alt="blogger" src="{% static "assets/img/deaflympics.gif" %}" /></div>
+            <div><img u="image" alt="dnn" src="{% static "assets/img/moh.png" %}" /></div>
+            <div><img u="image" alt="drupal" src="{% static "assets/img/muoh.jpg" %}" /></div>
+            <div><img u="image" alt="ebay" src="{% static "assets/img/mjbh.jpg" %}" /></div>
+            <div><img u="image" alt="facebook" src="{% static "assets/img/mjbh.jpg" %}" /></div>
+            <div><img u="image" alt="google" src="{% static "assets/img/ski.png" %}" /></div>
+            <div><img u="image" alt="ibm" src="{% static "assets/img/chamber.png" %}" /></div>
+            <div><img u="image" alt="ios" src="{% static "assets/img/corporate.jpg" %}" /></div>
+            <div><img u="image" alt="joomla" src="{% static "assets/img/datacom.jpg" %}" /></div>
+            <div><img u="image" alt="linkedin" src="{% static "assets/img/new.jpg" %}" /></div>
+            <div><img u="image" alt="mac" src="{% static "assets/img/para.png" %}" /></div>
+        
+        </div>
+        <a style="display: none" href="http://www.jssor.com">js slider</a>
+        <!-- Trigger -->
+        <script>
+            jssor_slider1_starter('slider1_container');
+        </script>
+
+    </div>
+    </div>
+</div>
+
+
+{% endblock %}
+{% block about_us %}
+{% endblock %}

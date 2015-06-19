@@ -1,0 +1,192 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Диф Спортын Хорооны вэбсайт</title>
+  </head>
+  <body>
+   {% block menu %}
+  <div class="container">
+  {% if messages %}
+    <div class="col-md-4">
+      {% for message in messages %}
+      <p>{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+      {% endfor %}
+      
+
+    </div>
+  {% endif %}
+  <div class="tolgoi">
+  <ul class="socail">
+  <li><a href="https://www.facebook.com/MongolianDeafSports"><img src="{% static 'assets/img/facebook.png' %}" width="30"></a></li>
+  <li><a href="https://twitter.com/mgldeafsport"><img src="{% static 'assets/img/twitter.png' %}" width="30"></a></li>
+  <li><a href="#"><img src="{% static 'assets/img/youtube.jpg' %}" width="30"></a></li>
+  <li><a href="#"><img src="{% static 'assets/img/instagram.png' %}" width="30"></a></li>
+  <div class="deesh">  
+  <form class="navbar-form navbar-left" role="search" action="/search/" method="post">{% csrf_token %}
+      <div class="form-group">
+      <input type="text" name="search_text" value="" id="username" class="form-control" role="search" placeholder="Хайх утгаа оруулна уу...">
+      </div>
+      <button type="submit" class="btn btn-default">Хайх</button>
+      </form>
+
+      </ul></div>
+  </div>
+  </div>
+  <header>
+
+  <div class="container">
+  
+    <div class="tolgoi">
+    <div class="lot">
+      <ul class="nav nav-pills">
+      <li role="presentation" class="enabled"><a href="/contact/">Холбоо барих</a></li>
+      <li role="presentation" class="enabled"><a href="/support_us/">Хандив </a></li>
+      
+      
+      <!ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">LAN<span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Монгол хэл</a></li>
+          <li><a href="#">English</a></li>
+        </ul>
+      </li>
+      <!/ul>
+      </ul>
+  </div>
+    </div>
+  </div>
+  </header>
+  <header>
+    <div class="container">
+      <div class="row">
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-header">
+            
+              <div class="navbar-brand">
+                <a href="/"><h1><b>Диф Спортын Хороо</b></h1></a>
+              </div>
+            </div>
+            <div class="menu">
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class=""><a href="/">Нүүр</a></li>                
+                <li role="presentation"><a href="/about_us/">Бидний тухай</a></li>
+                <li role="presentation"><a href="/news/">Мэдээ</a></li>
+                <li role="presentation" class="active"><a href="/sport/">Спорт</a></li>      
+                <li role="presentation"><a href="/deaflymp/">Дифлимп</a></li>
+                <li role="presentation"><a href="/support_us/">Хандив</a></li>    
+              </ul>
+            </div>
+            
+          </div>      
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  {% endblock %}
+	
+	<!-- Responsive slider - START -->
+{% block sidebar %}
+{% endblock %}
+{% block content %}
+<div class="container"> 
+<div class="sports_logo">
+<div><img src="{% static 'assets/img/shoot.png' %}" width="50"></div>
+<div><a href="/shooting/">Буудлага</a></div><br>
+<div><img src="{% static 'assets/img/bowling.jpg' %}" width="50"></div>
+<div><a href="/bowling/">Боулинг</a></div><br>
+<div><img src="{% static 'assets/img/Bicycle.png' %}" width="45"></div>
+<div><a href="/bicycle/">Дугуй</a></div><br>
+<div><img src="{% static 'assets/img/wrestling.jpg' %}" width="47"></div>
+<div><a href="/judo/">Жудо</a></div><br>
+<div><img src="{% static 'assets/img/judo.png' %}" width="45"></div>
+<div><a href="/wrestling/">Чөлөөт бөх</a></div><br>
+<div><img src="{% static 'assets/img/ski.jpg' %}" width="48"></div>
+<div><a href="/ski/">Цана</a></div><br>
+<div><img src="{% static 'assets/img/swim.png' %}" width="45"></div>
+<div><a href="/swimming/">Усан сэлэлт</a></div><br>
+<div><img src="{% static 'assets/img/basketball.jpg' %}" width="46"></div>
+<div><a href="/basketball/">Сагсанбөмбөг</a></div><br>
+<div><img src="{% static 'assets/img/soccer.png' %}" width="45"></div>
+<div><a href="/soccer/">Хөлбөмбөг</a></div><br>
+<div><img src="{% static 'assets/img/athletic.png' %}" width="60"></div>
+<div><a href="/athletic/">Хөнгөн атлетик</a></div><br>
+<div><img src="{% static 'assets/img/Chess-Game.png' %}" width="50"></div>
+<div><a href="/chess/">Шатар</a></div><br>
+<div><img src="{% static 'assets/img/ping-pong.png' %}" width="50"></div>
+<div><a href="/pingpong/">Ширээний теннис</a></div><br>
+</div>
+ </div><br>
+
+
+<div class="container">
+	<div class="about">	
+  <div class="row">
+  	  <div class="col-md-3">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="/sport/">Мэдээ</a></li>
+        <li>&nbsp</li>
+        <li><a href="/sport_lastest/">Сүүлд нэмэгдсэн</a></li>
+        <li><a href="/sport_reader/">Хамгийн их уншсан</a></li>
+      </ul>
+      </div>
+      <div class="col-md-9">
+          {% for i in posts %}
+            <div class="thumnailss">
+              <table>
+                <tr> 
+                  {% if i.pic != "" %}
+                  <th>
+                    <img src="/media/{{ i.pic }}/" width="150">
+                  </th>
+                  {% endif %}
+                  <td>    
+                    <h5>{{ i.title }}</h5>                
+                    <p style="text-align:justify;">{{ i.body|truncatechars:"250" }}<a href="/get_sports/{{ i.id }}/" alt="">Дэлгэрэнгүй</a> </i></p></td>
+                </tr>
+              </table>  
+            </div><hr>
+         {% endfor %}
+         <div class="col-md-4">
+         </div>
+<div class="col-md-4">
+         <div class="pagination">
+         <ul class="float:center;">
+          {% if posts.has_previous %}
+          <li><a href="?page={{ posts.previous_page_number }}">Previous</a></li>
+          {% endif %}
+          {% for pg in posts.paginator.page_range %}
+          {% if posts.number == pg %}
+          <li class="active"><a href="?page={{ pg }}">{{ pg }}</a></li>
+          {% else %}
+          <li><a href="?page={{ pg }}">{{ pg }}</a></li>
+          {% endif %}
+          {% endfor %}
+          {% if posts.has_next %}
+          <li><a href="?page={{ posts.next_page_number }}">Next</a></li>
+          {% endif %}
+          </ul>
+         </div>
+         </div>							
+  </div>
+  </div>
+  
+  </div><!-- /row -->
+</div><!-- /container -->
+	
+
+{% endblock %}
+{% block about_us %}
+{% endblock %}
+
+
+  </body>
+</html>

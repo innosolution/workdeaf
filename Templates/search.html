@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block sidebar %}
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="about">	
+  <div class="row">
+  	  <div class="col-md-3">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="/news/">Home</a></li>
+        <li><a href="/news_lastest/">Сүүлд нэмэгдсэн</a></li>
+        <li><a href="/news_reader/">Хамгийн их уншсан</a></li>
+        <li><a href="/album/">Зургийн сан</a></li>
+        <li><a href="/videos/">Видео сан</a></li>
+        <li><a href="/occation/">Үйл явдал</a></li>
+        <li><a href="/human/">Онцлох хүн</a></li>
+        <li><a href="/notice/">Зарлал</a></li>
+      </ul>
+      </div>
+      <div class="col-md-9">
+
+              	
+         
+         
+            {% if posts.count > 0 %}
+            {% for post in posts %}
+            <li><a href="/get_news/{{ post.id }}/" >{{ post.title }}</a></li>
+            {% endfor %}
+            {% else %}
+            <p class="para">Таны хайсан мэдээлэл олдсонгүй</p>
+            {% endif %}
+          
+
+
+
+
+
+
+
+
+         <div class="col-md-4">
+			   <div class="pagination">
+			   <ul>
+			   	{% if posts.has_previous %}
+			   	<li><a href="?page={{ posts.previous_page_number }}">Previous</a></li>
+			   	{% endif %}
+			   	{% for pg in posts.paginator.page_range %}
+			   	{% if posts.number == pg %}
+			   	<li class="active"><a href="?page={{ pg }}">{{ pg }}</a></li>
+			   	{% else %}
+			   	<li><a href="?page={{ pg }}">{{ pg }}</a></li>
+			   	{% endif %}
+			   	{% endfor %}
+			   	{% if posts.has_next %}
+                <li><a href="?page={{ posts.next_page_number }}">Next</a></li>
+                {% endif %}
+			   	</ul>
+			   </div>		
+         </div>
+		</div>							
+    </div>
+  
+  </div><!-- /row -->
+</div><!-- /container -->
+	
+	<div class="container">
+		<div class="row">
+			<hr>
+		</div>
+	</div>
+{% endblock %}
+{% block about_us %}
+{% endblock %}
+{% block content1 %}
+
+{% if posts.count > 0 %}
+{% for post in posts %}
+<li><a href="/get_news/{{ post.id }}/">{{ post.title }}</a></li>
+{% endfor %}
+{% else %}
+<li>Таны хайсан мэдээлэл олдсонгүй</li>
+{% endif %}
+
+{% endblock %}

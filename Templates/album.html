@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Диф Спортын Хорооны вэбсайт</title>
+    <style>
+
+</style>
+  </head>
+  <body>
+	
+	<!-- Responsive slider - START -->
+{% block sidebar %}
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="about">	
+  <div class="row">
+  	  <div class="col-md-3">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="/news/">Home</a></li>
+        <li><a href="/news_lastest/">Сүүлд нэмэгдсэн</a></li>
+        <li><a href="/news_reader/">Хамгийн их уншсан</a></li>
+        <li><a href="/album/">Зургийн сан</a></li>
+        <li><a href="/videos/">Видео сан</a></li>
+        <li><a href="/occation/">Үйл явдал</a></li>
+        <li><a href="/human/">Онцлох хүн</a></li>
+        <li><a href="/notice/">Зарлал</a></li>
+      </ul>
+      </div>
+      <div class="col-md-9">
+
+              {% for i in a %}
+              <div class="thumnailss">
+              <a href="/pictures/{{ i.id }}">{{ i }}</a>
+              </div>
+              {% endfor %}
+
+			 </div>		
+		</div>							
+    </div>
+  
+  </div><!-- /row -->
+</div><!-- /container -->
+	
+	<div class="container">
+		<div class="row">
+			<hr>
+		</div>
+	</div>
+{% endblock %}
+{% block about_us %}
+{% endblock %}
+
+
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for i in b %}
+<h3 align="center">{{ i.title }}</h3>
+<iframe width="550" height="345"
+src="{{ i.name }}">
+</iframe>
+{{ i.name }}
+{% endfor %}
+{% endblock %}

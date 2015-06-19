@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<h3 align="center">{{ medee.title }}</h3>
+ {% if medee.pic != '' %}
+ <img src="/media/{{ medee.pic }}/" width="400"/><br>
+ {% endif %}
+{{ medee.body }}
+{% endblock %}

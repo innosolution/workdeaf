@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+
+	
+	<div class="container">
+		<div class="row">
+			<div class="content">
+			{% for a1 in medee %}
+				<div class="col-md-4">
+					<!div class="wow flipInY" data-wow-offset="0" data-wow-delay="0.4s">
+						<div class="align-center">
+						<h4><b>Диф Мэдээ</b></h4>	
+						{% if a1.pic != '' %}
+						<img src="/media/{{ a1.pic }}/" width="200">	
+						{% else %}
+						<img src="/media/Chrysanthemum.jpg/" width="200">	
+						{% endif %}	
+							<p>
+							 {{ a1.title }}
+							</p>
+							<div class="ficon">
+								<a href="/get_news/{{a1.id}}/" alt="">Дэлгэрэнгүй</a> <i class="fa fa-long-arrow-right"></i>
+							</div>
+						</div>
+					<!/div>
+				</div>
+				{% endfor %}
+				<!--asda
+				<div class="col-md-4">
+					<div class="wow flipInY" data-wow-offset="0" data-wow-delay="0.8s">
+						<div class="align-center">
+							<h4>Тэмцээн</h4>					
+							<div class="icon">
+								<i class="fa fa-cloud fa-3x"></i>
+
+							</div>
+							<p>
+							 5 сарын 23-нд сагсны тэмцээн зохион байгууллагдана.5 сарын 23-нд сагсны тэмцээн зохион байгууллагдана.
+							</p>
+							<div class="ficon">
+								<a href="" alt="">Дэлгэрэнгүй</a> <i class="fa fa-long-arrow-right"></i>
+							</div>
+						</div>
+					</div>
+				</div>-->
+				{% for i in med %}
+				<div class="col-md-4">
+					<!div class="wow flipInY" data-wow-offset="0" data-wow-delay="1.2s">
+						<div class="align-center">
+						<h4><b>Диф Спорт</b></h4>
+                                <img src="/media/{{ i.pic }}/" width="200">
+												
+							<p>
+							 {{ i.title }}
+							</p>
+							<div class="ficon">
+								<a href="/get_sports/{{ i.id }}/" alt="">Дэлгэрэнгүй</a> <i class="fa fa-long-arrow-right"></i>
+							</div>
+						</div>
+					<!/div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="row">
+	    	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		        <script type="text/javascript">
+		    		$(document).ready(function() 
+		    		{
+		       		 $('.bxslider').bxSlider({
+		            slideWidth: 160,
+		            minSlides: 1,
+		            maxSlides: 8,
+		            moveSlides: 1,
+		            slideMargin: 10
+		      		  });
+		   			 });
+				</script>   
+			</div>
+		</div>
+	 </div>
+{% endblock %}

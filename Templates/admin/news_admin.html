@@ -1,0 +1,24 @@
+{% extends 'admin.html' %}
+
+{% block sidebar %}
+<ul>
+{% for c in cat %}<li><a href="/admin/get/{{ c.id }}/">{{ c }}</a></li>{% endfor %}
+</ul>
+<form action="/admin/medee_nemeh/">
+<input type="submit" value="Мэдээ нэмэх">
+</form>
+{% endblock %}
+{% block sidebar1 %}
+<ul>
+{% for b1 in b %}
+<li><a href="">{{ b1 }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}
+{% block content %}
+
+{% for m in a %}
+<h4>{{ m.title }}</h4>
+{{ m.body|upper|truncatewords:'20' }}
+{% endfor %}
+{% endblock %}

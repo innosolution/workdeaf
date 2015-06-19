@@ -1,0 +1,13 @@
+{% extends 'admin.html' %}
+
+
+{% block sidebar %}{% endblock %}
+{% block content %}
+<form action="/admin/video_nemeh/">
+<input type="submit" value="Видео нэмэх">
+</form>
+{% for m in video %}
+<h3>{{ m.title }}</h3>
+{{ m.name }}
+{% endfor %}
+{% endblock %}

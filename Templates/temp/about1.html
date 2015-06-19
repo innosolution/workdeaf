@@ -1,0 +1,427 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Диф Спортын Хорооны вэбсайт</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static "assets/css/bootstrap.min.css" %}" rel="stylesheet">
+	<link href="{% static "assets/css/responsive-slider.css" %}" rel="stylesheet">
+	<link rel="stylesheet" href="{% static "assets/css/animate.css" %}">
+	<link rel="stylesheet" href="{% static "assets/css/font-awesome.min.css" %}">
+	<link href="{% static "assets/css/style.css" %}" rel="stylesheet">	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+		<div class="container">
+			<div class="row">
+				<nav class="navbar navbar-default" role="navigation">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<div class="navbar-brand">
+								<a href="/"><h1>Диф Спортын Хороо</h1></a>
+							</div>
+						</div>
+						<div class="menu">
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation"><a href="/">Нүүр</a></li>								
+								<li role="presentation" class="active"><a href="/about_us/">Бидний тухай</a></li>
+								<li role="presentation"><a href="/news/">Мэдээ</a></li>
+								<li role="presentation"><a href="/sport/">Спорт</a></li>			
+								<li role="presentation"><a href="/deaflymp/">Дифлимп</a></li>
+								<li role="presentation"><a href="/support_us/">Хандив</a></li>
+												
+							</ul>
+						</div>
+					</div>			
+				</nav>
+			</div>
+		</div>
+	</header>
+	
+	<!-- Responsive slider - START -->
+	<div class="slider">
+	<div class="container">
+		<div class="row">
+			<div class="responsive-slider" data-spy="responsive-slider" data-autoplay="true">
+				<div class="slides" data-group="slides">
+					<ul>
+						<li>
+							<div class="slide-body" data-group="slide">
+								<img src="{% static "assets/img/2a.jpg" %}" alt="">
+								<div class="caption header" data-animate="slideAppearUpToDown" data-delay="500" data-length="300">
+									<button class="btn btn-primary"><h3>Мэндчилгээ</h3> </t> Монголын Сонсголын бэрхшээлтэй Иргэдийн спортын үйл... </button>
+									<div class="caption-sub" data-animate="slideAppearDownToUp" data-delay="800" data-length="300"><button class="btn btn-primary"><h3>Гишүүнээр элсэх<span></h3> Монголын Диф Спортын Хороонд гишүүнчлэлээр элсэхдээ...</button></div>
+									<div class="caption-sub" data-animate="slideAppearRightToLeft" data-delay="1200" data-length="300"><button class="btn btn-primary"><h3>Хандив өгөх</h3>Бидний үйл ажиллагааг дэмжин, бидэнтэй хамтран ажиллах</button></div>
+									
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="slide-body" data-group="slide">
+								<img src="{% static "assets/img/1.jpg" %}" alt="">
+								<div class="caption header" data-animate="slideAppearDownToUp" data-delay="500" data-length="300">
+									<button class="btn btn-primary"><h3>Мэндчилгээ</h3> </t> Монголын Сонсголын бэрхшээлтэй Иргэдийн спортын үйл... </button>
+									<div class="caption-sub" data-animate="slideAppearDownToUp" data-delay="800" data-length="300"><button class="btn btn-primary"><h3>Гишүүнээр элсэх<span></h3> Монголын Диф Спортын Хороонд гишүүнчлэлээр элсэхдээ...</button></div>
+									<div class="caption-sub" data-animate="slideAppearRightToLeft" data-delay="1200" data-length="300"><button class="btn btn-primary"><h3>Хандив өгөх</h3>Бидний үйл ажиллагааг дэмжин, бидэнтэй хамтран ажиллах</button></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="slide-body" data-group="slide">
+								<img src="{% static "assets/img/10.jpg" %}" alt="">
+								<div class="caption header" data-animate="slideAppearUpToDown" data-delay="500" data-length="300">
+								  <button class="btn btn-primary"><h3>Мэндчилгээ</h3> </t> Монголын Сонсголын бэрхшээлтэй Иргэдийн спортын үйл... </button>
+									<div class="caption-sub" data-animate="slideAppearDownToUp" data-delay="800" data-length="300"><button class="btn btn-primary"><h3>Гишүүнээр элсэх<span></h3> Монголын Диф Спортын Хороонд гишүүнчлэлээр элсэхдээ...</button></div>
+									<div class="caption-sub" data-animate="slideAppearRightToLeft" data-delay="1200" data-length="300"><button class="btn btn-primary"><h3>Хандив өгөх</h3>Бидний үйл ажиллагааг дэмжин, бидэнтэй хамтран ажиллах</button></div>
+						
+								</div>
+							</div>
+						</li>
+				
+					</ul>
+				</div>
+		   
+				<a class="slider-control left" href="#" data-jump="prev"><i class="fa fa-angle-left fa-2x"></i></a>
+				<a class="slider-control right" href="#" data-jump="next"><i class="fa fa-angle-right fa-2x"></i></a>		
+			</div>
+		</div>
+	</div>
+	</div>
+    <!-- Responsive slider - END -->
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="contents">
+					<h2>Create your outstanding <span>clean</span> and <span>hight quality</span> website</h2>
+					<p>Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	
+	<div class="container">
+		<div class="row">
+			<div class="recent">
+				<button class="btn-primarys"><h3>My Recent Works</h3></button>
+				<hr>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="content">
+				<div class="col-md-4">
+					<div class="wow flipInY" data-wow-offset="0" data-wow-delay="0.4s">
+						<div class="align-center">
+							<h4>Fully responsive</h4>					
+							<div class="icon">
+								<i class="fa fa-desktop fa-3x"></i>
+							</div>
+							<p>
+							 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
+							</p>
+							<div class="ficon">
+								<a href="" alt="">Learn more</a> <i class="fa fa-long-arrow-right"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="wow flipInY" data-wow-offset="0" data-wow-delay="0.8s">
+						<div class="align-center">
+							<h4>Modern Design</h4>					
+							<div class="icon">
+								<i class="fa fa-cloud fa-3x"></i>
+
+							</div>
+							<p>
+							 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
+							</p>
+							<div class="ficon">
+								<a href="" alt="">Learn more</a> <i class="fa fa-long-arrow-right"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="wow flipInY" data-wow-offset="0" data-wow-delay="1.2s">
+						<div class="align-center">
+							<h4>Hight Quality</h4>					
+							<div class="icon">
+								<i class="fa fa-location-arrow fa-3x"></i>
+
+							</div>
+							<p>
+							 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
+							</p>
+							<div class="ficon">
+								<a href="" alt="">Learn more</a> <i class="fa fa-long-arrow-right"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="container">
+		<div class="row">
+			<div class="box">
+				
+				<div class="col-md-6">
+					<div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.8s">
+						<div class="align-center">
+							<h4>Quick Support</h4>					
+							<div class="icon">
+								<i class="fa fa-heart-o fa-3x"></i>
+
+							</div>
+							<p>
+							 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
+							</p>
+							<div class="ficon">
+								<a href="" alt="">Learn more</a> <i class="fa fa-long-arrow-right"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="wow bounceIn" data-wow-offset="0" data-wow-delay="1.3s">
+						<div class="align-center">
+							<h4>Easy Customize</h4>					
+							<div class="icon">
+								<i class="fa fa-laptop fa-3x"></i>
+
+							</div>
+							<p>
+							 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
+							</p>
+							<div class="ficon">
+								<a href="" alt="">Learn more</a> <i class="fa fa-long-arrow-right"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!--about-->
+	
+		<div class="container">
+			<div class="about">			
+					<div class="row">
+						<div class="recent">
+							<button class="btn-primarys"><h3>About us</h3></button>
+							<hr>
+						</div>
+					</div>				
+				<div class="row">			
+					<div class="row-slider">
+						<div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.2s">
+							<div class="col-lg-6 mar-bot30">
+								<div class="responsive-slider" data-spy="responsive-slider" data-autoplay="true">
+									<div class="slides" data-group="slides">
+										<ul> 	    		
+											<div class="slide-bodys" data-group="slide">
+												<li><img alt="" class="img-responsive" src="{% static ""%}img/3.jpg" width="100%" height="450"/></li>
+												<li><img alt="" class="img-responsive" src="img/4.jpg" width="100%" height="450"/></li>
+												<li><img alt="" class="img-responsive" src="img/5.jpg" width="100%" height="450"/></li>
+											</div>
+										</ul>
+											
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.6s">
+								<div class="thumnails">
+									<h4>Voluptatem accusantium doloremque</h4>													
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+									sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
+									magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+									quis nostrud exerci tation ullamcorper suscipit 
+									lobortis nisl ut aliquip ex ea commodo consequat.</p>								
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+									sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
+									magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+									quis nostrud exerci tation ullamcorper suscipit 
+									lobortis nisl ut aliquip ex ea commodo consequat.</p>
+									
+									<div class="ficon">
+										<a href="" alt="">Learn more</a> <i class="fa fa-long-arrow-right"></i>
+									</div>
+								</div>
+							</div>
+						</div>					
+					</div>	
+				</div>					
+			</div>			
+		</div>
+	
+	<!--/about-->
+	
+	
+	<div class="container">
+		<div class="row">
+			<div class="recent">
+				<button class="btn-primarys"><h3>Our Team</h3></button>
+				<hr>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="content">
+				<div class="col-md-4">
+					<div class="wow fadeInUp" data-wow-delay="0.2s">
+						<div class="align-center">
+							<h4>Alexandra</h4>	
+								<img src="img/team/3.jpg" alt="" class="img-responsive">
+							<p>
+							 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
+							</p>
+							<div class="ficon">
+								<a href="" alt="">Learn more</a><i class="fa fa-long-arrow-right"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="wow fadeInUp" data-wow-delay="0.4s">
+						<div class="align-center">
+							<h4>John Doe</h4>					
+							
+							<img src="img/13.jpg" alt="" class="img-responsive">
+							<p>
+							 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
+							</p>
+							<div class="ficon">
+								<a href="" alt="">Learn more</a> <i class="fa fa-long-arrow-right"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="wow fadeInUp" data-wow-delay="0.6s">
+						<div class="align-center">
+							<h4>Kelly Hidayah</h4>					
+							
+							<img src="img/team/members3.jpg" alt="" class="img-responsive">
+							<p>
+							 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
+							</p>
+							<div class="ficon">
+								<a href="" alt="">Learn more</a> <i class="fa fa-long-arrow-right"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<hr>
+		</div>
+	</div>
+	
+	<!--start footer-->
+	<footer>
+
+		
+		
+		<div id="sub-footer">
+			<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+						<h5 class="widgetheading">Хуудас</h5>
+						<ul class="link-list">
+							<li><a href="#"><b>Нүүр</b></a></li>
+							<li><a href="#"><b>Бидний тухай</b></a></li>
+							<li><a href="#"><b>Мэдээ</b></a></li>
+							<li><a href="#"><b>Спорт</b></a></li>
+							<li><a href="#"><b>Дифлимп</b></a></li>	
+						</ul>
+				</div>
+				<div class="col-lg-6">
+						<h5 class="widgetheading">Latest posts</h5>
+						<ul class="link-list">
+							<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+							<li><a href="#">Pellentesque et pulvinar enim. Quisque at tempor ligula</a></li>
+							<li><a href="#">Natus error sit voluptatem accusantium doloremque</a></li>
+						</ul>
+				</div>
+			
+				<div class="col-lg-3">
+						<h5 class="widgetheading">Бидэнтэй холбоо барих</h5>
+						<p>Диф Спортын Хороо</br>
+						Modernbuilding suite V124, AB 01
+						Someplace 16425 Earth</p>
+						<p>
+							<i class="icon-phone"></i> (976) 99710703, 95180462 (SMS) <br>
+							<i class="icon-envelope-alt"></i> enkhbayarj@mgldeafsport.mn
+						</p>
+						<ul class="social-network">
+							<li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook fa-1x"></i></a></li>
+							<li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter fa-1x"></i></a></li>
+							<li><a href="#" data-placement="top" title="Instagram"><i class="fa fa-instagram fa-1x"></i></a></li>
+							<li><a href="#" data-placement="top" title="Youtube"><i class="fa fa-youtube fa-1x"></i></a></li>
+							
+						</ul>
+				</div>
+			</div>
+			<div class="row">
+					<div class="col-lg-4">
+						
+					</div>
+					<div class="col-lg-6">
+						<div class="copyright">
+							<p>
+								<span>&copy; Диф Спортын Хороо 2015 </span><a href="http://innosol.mn" target="_blank">ИнноСолюшн ХХК</a>
+							</p>
+						</div>
+					</div>
+				</div>
+		</div>
+		
+		</div>
+	</footer>
+	<!--end footer-->
+	
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  
+     <script src="{% static "assets/js/jquery.js" %}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static "assets/js/bootstrap.min.js"%}"></script>
+	<script src="{% static "assets/js/responsive-slider.js" %}"></script>
+	<script src="{% static "assets/js/wow.min.js"%}"></script>
+	<script>
+	wow = new WOW(
+	 {
+	
+		}	) 
+		.init();
+	</script> 
+  </body>
+</html>

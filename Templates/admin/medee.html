@@ -1,0 +1,19 @@
+{% extends 'admin.html' %}
+
+
+{% block sidebar %}
+<ul>
+{% for c in cat %}<li><a href="/admin/get/{{ c.id }}/">{{ c }}</a></li>{% endfor %}
+</ul>
+<form action="/admin/medee_nemeh/">
+	<input type="submit" value="Мэдээ нэмэх">
+</form>
+{% endblock %}
+{% block content %}
+
+{% for m in medees %}
+    	<h2>{{ m.title }}</h2><br>
+    	{{ m.body }}<br>
+    	{{ m.news_date }}
+    	{% endfor %}
+{% endblock %}

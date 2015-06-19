@@ -1,0 +1,19 @@
+{% extends 'admin.html' %}
+
+
+{% block sidebar %}
+<ul>
+{% for c in cat %}<li><a href="/admin/get/{{ c.id }}/">{{ c }}</a></li>{% endfor %}
+</ul>
+<form action="/admin/sport_nemeh/">
+	<input type="submit" value="Спортын мэдээ нэмэх">
+</form>
+{% endblock %}
+{% block content %}
+
+{% for m in sport %}
+    	<h2>{{ m.title }}</h2><br>
+    	{{ m.body }}<br>
+    	{{ m.news_date }}
+    	{% endfor %}
+{% endblock %}

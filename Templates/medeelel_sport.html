@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Диф Спортын Хорооны вэбсайт</title>
+  </head>
+  <body>
+	
+	<!-- Responsive slider - START -->
+{% block sidebar %}
+{% endblock %}
+{% block content %}
+<div class="container"> 
+<div class="sports_logo">
+<div><img src="{% static 'assets/img/shoot.png' %}" width="50"></div>
+<div><a href="/shooting/">Буудлага</a></div><br>
+<div><img src="{% static 'assets/img/bowling.jpg' %}" width="50"></div>
+<div><a href="/bowling/">Боулинг</a></div><br>
+<div><img src="{% static 'assets/img/Bicycle.png' %}" width="45"></div>
+<div><a href="/bicycle/">Дугуй</a></div><br>
+<div><img src="{% static 'assets/img/wrestling.jpg' %}" width="47"></div>
+<div><a href="/judo/">Жудо</a></div><br>
+<div><img src="{% static 'assets/img/judo.png' %}" width="45"></div>
+<div><a href="/wrestling/">Чөлөөт бөх</a></div><br>
+<div><img src="{% static 'assets/img/ski.jpg' %}" width="48"></div>
+<div><a href="/ski/">Цана</a></div><br>
+<div><img src="{% static 'assets/img/swim.png' %}" width="45"></div>
+<div><a href="/swimming/">Усан сэлэлт</a></div><br>
+<div><img src="{% static 'assets/img/basketball.jpg' %}" width="46"></div>
+<div><a href="/basketball/">Сагсанбөмбөг</a></div><br>
+<div><img src="{% static 'assets/img/soccer.png' %}" width="45"></div>
+<div><a href="/soccer/">Хөлбөмбөг</a></div><br>
+<div><img src="{% static 'assets/img/athletic.png' %}" width="60"></div>
+<div><a href="/athletic/">Хөнгөн атлетик</a></div><br>
+<div><img src="{% static 'assets/img/Chess-Game.png' %}" width="50"></div>
+<div><a href="/chess/">Шатар</a></div><br>
+<div><img src="{% static 'assets/img/ping-pong.png' %}" width="50"></div>
+<div><a href="/pingpong/">Ширээний теннис</a></div><br>
+</div>
+ </div><br>
+
+
+<div class="container">
+	<div class="about">	
+  <div class="row">
+  	  <div class="col-md-3">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="/sport/">Home</a></li>
+        <li><a href="/sport_lastest/">Сүүлд нэмэгдсэн</a></li>
+        <li><a href="/sport_reader/">Хамгийн их уншсан</a></li>
+      </ul>
+      </div>
+      <div class="col-md-9">
+      	        <div class="thumnailss">
+		       <h4>{{ medee.title }}</h4>	
+		       {% if medee.pic != "" %}
+      	      <img id="image" src="/media/{{ medee.pic }}/" width="780" height="400">
+      	       {% endif %}												
+			    <p>{{ medee.body }}</p>
+          <div id="date">
+          <p>{{ medee.sport_date }}</p>	
+          </div>
+			   </div>		
+		</div>						
+    </div>
+  
+  </div><!-- /row -->
+</div><!-- /container -->
+	
+	<div class="container">
+		<div class="row">
+			<hr>
+		</div>
+	</div>
+{% endblock %}
+{% block about_us %}
+{% endblock %}
+
+
+  </body>
+</html>
+
+<style type="text/css">
+	#image
+	{
+		border:2px solid #000;
+	}
+</style>
+

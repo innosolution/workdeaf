@@ -1,0 +1,10 @@
+{% extends 'admin.html' %}
+
+
+{% block sidebar %}{% endblock %}
+{% block content %}
+{% for m in fil %}
+<h3>{{ m.title }}</h3>
+{{ m.name }}<nr>
+{% endfor %}
+{% endblock %}

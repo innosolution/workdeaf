@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block side %}
+{% for s in sp %}
+<a href="/sort_sport/{{ s.id }}/">{{ s }}</a>
+{% endfor %}
+{% endblock %}
+{% block content %}
+{% for m in medee %}
+ <h4>{{ m.title }}</h4>
+ {% if m.pic != '' %}
+ <img src="/media/{{ m.pic }}/" width="100"/><br>
+ {% endif %}
+ {{ m.body|truncatewords:'5' }}<a href="/get_sport/{{ m.id }}/">дэлгэрэнгүй</a>
+{% endfor %}
+
+{% endblock %}
+
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	
+</script>
