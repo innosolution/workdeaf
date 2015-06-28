@@ -1,7 +1,7 @@
 from django import forms
 from django.forms import ModelForm
 from base_admin.models import *
-from captcha.fields import CaptchaField
+#from captcha.fields import CaptchaField
 
 class MedeeForm(ModelForm):
 	class Meta:
@@ -33,6 +33,6 @@ class AlbumForm(ModelForm):
 		model = AlbumModel
 		fields = ('name',)
 
-class CaptchaForm(forms.Form):
+#class CaptchaForm(forms.Form):
 	#myfield = CharField()
-	captcha = CaptchaField(label='')
+#	captcha = CaptchaField(label='')

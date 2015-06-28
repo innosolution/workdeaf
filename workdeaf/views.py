@@ -5,7 +5,7 @@ from django.core.paginator import Paginator, EmptyPage, InvalidPage
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
-from base_admin.forms import CaptchaForm
+#from base_admin.forms import CaptchaForm
 
 from base_admin.models import *
 def send_email(request):

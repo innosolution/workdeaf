@@ -10,7 +10,7 @@ urlpatterns = [
 
 
 
-    url(r'^captcha/', include('captcha.urls')),
+#    url(r'^captcha/', include('captcha.urls')),
     url(r'^base_admin_site/', include(admin.site.urls)),
     #url(r'^medee/', 'workdeaf.views.medee'),
     #url(r'^uil_yvdal/', 'workdeaf.views.uil_yvdal'),
